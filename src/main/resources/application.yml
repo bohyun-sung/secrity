@@ -1,0 +1,48 @@
+spring:
+  profiles:
+    active: local
+#  datasource:
+#    url: jdbc:h2:tcp://localhost/~/test
+#    driver-class-name: org.h2.Driver
+#    username: sa
+#    password: password
+#
+#  jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
+#    properties.hibernate.hbm2ddl.auto: update
+#    showSql: true
+#    테이블 자동 생성 x
+#    properties.hibernate.hbm2ddl.auto: none
+
+# Swagger
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+# 국제화 메세지
+  messages:
+    basename: i18n/exception
+    encoding: UTF-8
+
+# jwt
+  jwt:
+    secret: hibohyun#&$
+
+  social:
+    kakao:
+      client_id: 07b256503ed932dac5ae0271d9e89de6 # 앱생성시 받은 REST API 키
+      redirect: /social/login/kakao
+      url:
+        login: https://kauth.kakao.com/oauth/authorize
+        token: https://kauth.kakao.com/oauth/token
+        profile: https://kapi.kakao.com/v2/user/me
+#  url:
+#    base: http://localhost:8080
+
+  thymeleaf:
+    cache: false
+    check-template-location: true
+    prefix: classpath:/templates/
+    suffix: .html
+server:
+  port: 8080

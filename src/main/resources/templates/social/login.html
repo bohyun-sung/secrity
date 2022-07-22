@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+<body>
+<!--<h1 th:text="${urlLog}"></h1>-->
+<button onclick="popupKakaoLogin()">KakaoLogin</button>
+<script>
+    var urlLog = '[[${urlLog}]]'
+
+    console.log(urlLog);
+    console.log(decodeURI(urlLog));
+    console.log(encodeURI(urlLog))
+    function popupKakaoLogin() {
+        const decodeURI = decodeURIComponent(urlLog);
+        window.open(decodeURI, 'popupKakaoLogin', 'width=700,height=500,scrollbars=0,toolbar=0,menubar=no')
+    };
+</script>
+</body>
+</html>

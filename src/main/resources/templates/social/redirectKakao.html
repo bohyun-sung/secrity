@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>access_token </p>
+    <p th:utext= "${authInfo.access_token}"></p><br>
+    <p>token_type</p>
+    <p th:utext= "${authInfo.token_type}"></p><br>
+    <p>refresh_token</p>
+    <p th:utext= "${authInfo.refresh_token}"></p><br>
+    <p>expires_in</p>
+    <p th:utext= "${authInfo.expires_in}"></span></p><br>
+    <p>scope</p>
+    <p th:utext= "${authInfo.scope}"></p><br>
+</body>
+</html>
